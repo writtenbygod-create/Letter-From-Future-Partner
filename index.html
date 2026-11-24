@@ -60,6 +60,114 @@ h2{font-size:clamp(30px,5.8vw,58px);line-height:1.08;margin:0 0 14px;color:#f7e8
 .footer-note{position:absolute;bottom:12px;color:#78a5b2;font:500 8px 'Cinzel',serif;letter-spacing:.2em;text-transform:uppercase}
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes clockFloat{0%,100%{transform:translateY(0) rotateY(-5deg)}50%{transform:translateY(-10px) rotateY(5deg)}}@keyframes hourTick{to{transform:translateX(-50%) rotate(402deg)}}@keyframes minuteTick{to{transform:translateX(-50%) rotate(488deg)}}@keyframes heartbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.13)}24%{transform:scale(1)}36%{transform:scale(1.09)}52%{transform:scale(1)}}@keyframes twinkle{from{opacity:.25}to{opacity:.85}}@keyframes carDrive{0%{left:-25%}100%{left:115%}}@keyframes warp{0%{opacity:0}12%,72%{opacity:1}100%{opacity:0}}@keyframes warpSpin{0%{transform:scale(.5) rotate(0)}45%{transform:scale(2.8) rotate(560deg)}100%{transform:scale(8) rotate(1500deg);opacity:0}}@keyframes paperIn{from{opacity:0;transform:translateY(30px) rotateX(9deg)}to{opacity:1;transform:none}}
 @media(max-width:520px){.page{padding:25px 16px 38px}.machine-area{width:min(82vw,330px)}.city-scene{height:180px}.footer-note{font-size:7px}}
+
+/* PAGE 3 + PAGE 4: warm ivory theme only */
+.page#p3,
+.page#p4 {
+  background:
+    radial-gradient(ellipse at 50% 15%, #ffffff 0%, #fbf7ee 48%, #eee4d2 100%);
+  color: #34313a;
+}
+.page#p3:before,
+.page#p4:before {
+  border-color: #c9a66b88;
+  outline-color: #d8c49a55;
+}
+.page#p3 .eyebrow,
+.page#p4 .eyebrow {
+  color: #9b7844;
+  text-shadow: none;
+}
+.page#p3 h2,
+.page#p4 h2 {
+  color: #37303a;
+  text-shadow: none;
+}
+.page#p3 .subtitle,
+.page#p4 .subtitle,
+.page#p3 .hint,
+.page#p4 .hint,
+.page#p3 .footer-note,
+.page#p4 .footer-note {
+  color: #92764c;
+  text-shadow: none;
+}
+.page#p3 .copy,
+.page#p4 .copy {
+  color: #514a50;
+}
+.page#p3 .copy strong,
+.page#p4 .copy strong {
+  color: #8d6637;
+}
+.page#p3 .cta,
+.page#p4 .cta {
+  color: #fffaf1;
+  background: linear-gradient(135deg, #b9955e, #8f6a3d);
+  border-color: #a98753;
+  box-shadow: 0 5px 22px #8e714033;
+}
+.page#p3 .robot-heart {
+  filter: drop-shadow(0 5px 12px #d98c9a55);
+}
+.page#p4 .letter-card {
+  background: linear-gradient(145deg, #fffdf8, #f1e7d6);
+  border: 1px solid #c8a76e;
+  box-shadow: 0 15px 55px #6b57301c;
+}
+.page#p4 .letter-card .eyebrow {
+  color: #9b7844;
+}
+.page#p4 .letter-card h2 {
+  color: #37303a;
+}
+.page#p4 .letter-card .subtitle {
+  color: #9b7844;
+}
+.page#p4 .letter-card .copy {
+  color: #514a50;
+}
+.page#p4 .two-hearts .heart-choice {
+  background: #fffaf2;
+  border-color: #c6a36c;
+  box-shadow: 0 4px 16px #846b4420;
+}
+.page#p4 .two-hearts > span {
+  color: #9b7844 !important;
+}
+.page#p4 .heart-status {
+  color: #665b50;
+}
+.page#p4 .footer-note {
+  color: #92764c;
+}
+.welcome-couple {
+  width: min(88vw, 520px);
+  margin: 8px auto 4px;
+  filter: drop-shadow(0 12px 18px #8a79501c);
+  animation: coupleFloat 4.5s ease-in-out infinite;
+}
+.welcome-bubble {
+  display: inline-block;
+  margin: 2px auto 8px;
+  padding: 10px 19px;
+  border: 1px solid #c7a56d;
+  border-radius: 24px 24px 24px 5px;
+  background: #fffdf8;
+  color: #80613b;
+  font: 600 12px 'Cinzel', serif;
+  letter-spacing: .13em;
+  box-shadow: 0 5px 18px #8a79501c;
+}
+@keyframes coupleFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@media(max-width:520px) {
+  .welcome-couple { width: min(90vw, 420px); }
+  .welcome-bubble { font-size: 10px; }
+}
+
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 /* Mobile scrolling fix: keep the top of long pages reachable and visible. */
@@ -146,8 +254,52 @@ h2{font-size:clamp(30px,5.8vw,58px);line-height:1.08;margin:0 0 14px;color:#f7e8
 <div class="message-card"><p>Your future partner has written a letter just for you…</p></div><button class="cta" id="readyBtn" style="margin-top:22px">TAKE ME TO 2060</button><div class="hint" style="margin-top:12px">Start the time machine</div><div class="footer-note">Destination: 2060 · Journey time: 34 years</div>
 </section>
 <section class="page" id="p3">
-<p class="eyebrow">YOUR JOURNEY HAS BROUGHT YOU HERE</p><h2>WELCOME TO 2060</h2><p class="subtitle">The future is not just a place · It is a story</p>
-<div class="city-scene"><div class="city-car"></div></div><div class="robot-heart"><svg viewBox="0 0 100 100"><path d="M50 87C41 78 13 58 13 34C13 12 42 7 50 29C59 7 87 12 87 34C87 58 59 78 50 87Z"/></svg></div>
+<p class="eyebrow">YOUR JOURNEY HAS BROUGHT YOU HERE</p><h2>WELCOME TO 2060</h2><p class="subtitle">A beautiful new chapter begins</p>
+<div class="welcome-bubble">WELCOME TO 2060!</div>
+<svg class="welcome-couple" viewBox="0 0 520 285" role="img" aria-label="A warm cartoon illustration of an elderly couple welcoming you to the year 2060">
+  <defs>
+    <linearGradient id="grandpaCoat" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#91b8a5"/><stop offset="1" stop-color="#557f70"/></linearGradient>
+    <linearGradient id="grandmaDress" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e7a9ad"/><stop offset="1" stop-color="#bd737f"/></linearGradient>
+    <linearGradient id="skinTone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6d2b4"/><stop offset="1" stop-color="#dfaa89"/></linearGradient>
+  </defs>
+  <ellipse cx="260" cy="264" rx="174" ry="13" fill="#bca987" opacity=".22"/>
+  <!-- Grandpa -->
+  <g stroke="#55483f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M119 244 Q121 186 151 164 Q183 143 215 164 Q244 184 246 244Z" fill="url(#grandpaCoat)"/>
+    <path d="M159 164 L183 195 L207 164" fill="#f8f0e4"/>
+    <path d="M181 194 L170 244 M184 194 L198 244" fill="none" stroke="#e7d7bf" stroke-width="3"/>
+    <path d="M130 185 Q105 162 94 130 Q90 119 99 115 Q108 112 113 124 L139 157" fill="url(#skinTone)"/>
+    <path d="M216 182 Q236 157 243 129 Q246 116 256 120 Q265 124 260 137 Q253 174 235 198" fill="url(#skinTone)"/>
+    <path d="M143 105 Q139 55 180 48 Q222 47 229 91 Q235 133 204 150 Q176 162 152 137 Q143 124 143 105Z" fill="url(#skinTone)"/>
+    <path d="M143 99 Q133 64 162 47 Q198 29 222 60 Q234 75 228 100 Q216 82 201 78 Q181 93 151 84Z" fill="#e7e5dc"/>
+    <path d="M160 105 Q168 100 176 105 M198 105 Q206 100 214 105" fill="none"/>
+    <circle cx="170" cy="111" r="3.5" fill="#51423c" stroke="none"/><circle cx="205" cy="111" r="3.5" fill="#51423c" stroke="none"/>
+    <path d="M177 130 Q188 139 201 129" fill="none" stroke="#9e5e55" stroke-width="3"/>
+    <path d="M153 94 Q168 87 180 95 M197 94 Q209 87 220 96" fill="none" stroke="#b5b0a5" stroke-width="4"/>
+    <path d="M96 118 Q88 98 96 82" fill="none" stroke="#dfaa89" stroke-width="8"/>
+    <path d="M91 84 Q77 69 82 55 M92 83 Q104 66 108 54" fill="none" stroke="#dfaa89" stroke-width="7"/>
+  </g>
+  <!-- Grandma -->
+  <g stroke="#55483f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M278 244 Q282 184 311 164 Q344 145 377 165 Q406 184 410 244Z" fill="url(#grandmaDress)"/>
+    <path d="M309 164 Q344 203 379 164" fill="none" stroke="#f8e6dc" stroke-width="5"/>
+    <path d="M299 187 Q277 164 274 135 Q272 122 282 119 Q292 116 296 129 L313 162" fill="url(#skinTone)"/>
+    <path d="M390 184 Q411 158 418 128 Q421 116 431 120 Q440 124 435 138 Q426 177 409 199" fill="url(#skinTone)"/>
+    <path d="M300 103 Q296 59 336 48 Q380 42 393 86 Q402 126 372 149 Q344 165 316 139 Q302 125 300 103Z" fill="url(#skinTone)"/>
+    <path d="M298 108 Q284 70 315 48 Q347 24 380 45 Q404 61 397 111 Q384 83 366 75 Q341 92 307 82Z" fill="#f0eee7"/>
+    <path d="M315 105 Q323 100 331 105 M357 105 Q365 100 373 105" fill="none"/>
+    <circle cx="325" cy="112" r="3.5" fill="#51423c" stroke="none"/><circle cx="364" cy="112" r="3.5" fill="#51423c" stroke="none"/>
+    <path d="M331 132 Q345 143 359 131" fill="none" stroke="#a85e69" stroke-width="3"/>
+    <path d="M307 94 Q320 86 334 94 M354 94 Q369 86 382 95" fill="none" stroke="#c9c5bb" stroke-width="4"/>
+    <path d="M431 119 Q440 98 435 82" fill="none" stroke="#dfaa89" stroke-width="8"/>
+    <path d="M434 83 Q422 68 418 55 M434 82 Q448 66 451 53" fill="none" stroke="#dfaa89" stroke-width="7"/>
+  </g>
+  <!-- Joined hands and warm hearts -->
+  <path d="M244 198 Q259 188 274 198" fill="none" stroke="#c99567" stroke-width="7" stroke-linecap="round"/>
+  <path d="M260 183 C252 174 238 179 240 191 C242 201 260 210 260 210 C260 210 278 201 280 191 C282 179 267 174 260 183Z" fill="#d9828f" stroke="#fff4ec" stroke-width="2"/>
+  <path d="M92 30 Q98 20 104 30 Q110 20 116 30 Q116 41 104 48 Q92 41 92 30Z" fill="#d9a653" opacity=".75"/>
+  <path d="M414 28 Q420 18 426 28 Q432 18 438 28 Q438 39 426 46 Q414 39 414 28Z" fill="#d9a653" opacity=".75"/>
+</svg>
 <p class="copy">A SPECIAL LETTER IS WAITING FOR YOU<br><strong>.</strong></p><button class="cta" id="openLetter" style="margin-top:12px">DISCOVER YOUR LETTER</button><div class="footer-note">Welcome, traveller · Year 2060</div>
 </section>
 <section class="page" id="p4">
